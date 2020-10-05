@@ -1,0 +1,9 @@
+$primary-color: #fafafa;
+
+.a {
+    color: $primary-color;
+    margin: 10px;
+    .b {
+        color: #221133;
+    }
+}
