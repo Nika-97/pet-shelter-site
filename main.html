@@ -185,8 +185,10 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script>
+        // document.ready - относится ко всем скриптам, то есть следующие скрипты писать в этом вложении. Document.ready говорит о том, что скрипты будут выполняться после полной загрузки основных элементов страницы и подключаемых скриптов и стилей.
         $(document).ready(function () {
-             $('.owl-carousel').owlCarousel({
+            // инициализация слайдера (применяются его сборка и настройки)
+            $('.owl-carousel').owlCarousel({
                 loop: true,
                 nav: true,
                 items: 3,
@@ -204,9 +206,19 @@
                 //     }
                 // }
             })
-
-
-        });
+            // событие наведения на карточку pet
+            $(".learn-more-button")
+                .mouseover(function () {
+                    // навели курсор на объект 
+                    $(this).parent().parent().addClass( "hovered" ) 
+                    console.log("it works")   
+                    console.log($(this).parent())   
+                })
+                .mouseout(function () {
+                    $(this).parent().parent().removeClass( "hovered" ) 
+                    // отвели курсор с объекта
+                })
+        })
     </script>
 </body>
 

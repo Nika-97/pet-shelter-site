@@ -309,6 +309,12 @@ button {
 				width: 270px;
 				height: 425px;
 				border-radius: 10px;
+				// transition-duration: 00.4s;
+				// -webkit-transition: 0.3s ease-in-out;
+				// -moz-transition: 0.3s ease-in-out;
+				// -o-transition: 0.3s ease-in-out;
+				// transition: 0.3s ease-in-out;
+				
 				img {
 					height: 270px;
 				}
@@ -317,9 +323,15 @@ button {
 					text-align: center;
 				}
 				&.hovered {
-					-webkit-box-shadow: 0px 0px 10px 3px rgba(50, 50, 50, 0.025);
-					-moz-box-shadow: 0px 0px 10px 3px rgba(50, 50, 50, 0.025);
-					box-shadow: 0px 0px 10px 3px rgba(50, 50, 50, 0.025);
+					-webkit-box-shadow: 0px 0px 10px 5px rgba(50, 50, 50, 0.03);
+					-moz-box-shadow: 0px 0px 10px 5px rgba(50, 50, 50, 0.03);
+					box-shadow: 0px 0px 10px 5px rgba(68, 20, 20, 0.03);
+					// transform: scale(1.01);
+					// transition-duration: 00.4s;
+					// -webkit-transition: 0.3s ease-in-out;
+					// -moz-transition: 0.3s ease-in-out;
+					// -o-transition: 0.3s ease-in-out;
+					// transition: 0.3s ease-in-out;
 					.learn-more-button {
 						background-color: rgb(241, 205, 179);
 					}
