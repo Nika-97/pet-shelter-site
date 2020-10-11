@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our shelter pets</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="header-wrap">
+        <div class="header">
+            <a href="./index.html" class="logo">Cozy House
+                <span>Shelter for pets in Boston</span>
+            </a>
+            <div class="nav">
+                <a href="#">About the shelter</a>
+                <a href="#">Our pets</a>
+                <a href="#">To help the shelter</a>
+                <a href="#">Contacts</a>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <div class="pets-page-wrap">
+        <div class="container">
+            <div class="h2-pets">
+                <h2>Our friends who <br>
+                    are looking for a house</h2>
+            </div>
+            <div class="all-pets">
+                <div class="pet">
+                    <img src="./img/img-main/Cat-Kathrine.png" alt="Cat-Katrine">
+                    <span class="pets-name">Katrine</span>
+                    <a href="#">
+                        <button class="learn-more-button">Learn More</button>
+                    </a>
+                </div>
+                <div class="pet">
+                    <img src="./img/img-main/Dog-Jennifer.png" alt="Dog-Jennifer">
+                    <span class="pets-name">Jennifer</span>
+                    <a href="#"><button class="learn-more-button">Learn More</button></a>
+                </div>
+                <div class="pet">
+                    <img src="./img/img-main/Dog-Woody.png" alt="Dog-Woody">
+                    <span class="pets-name">Woody</span>
+                    <a href="#"><button class="learn-more-button">Learn More</button></a>
+                </div>
+                <div class="pet">
+                    <img src="./img/img-main/Sophia-puppy.png" alt="Sophia-puppy">
+                    <span class="pets-name">Sophia</span>
+                    <a href="#"><button class="learn-more-button">Learn More</button></a>
+                </div>
+                <div class="pet">
+                    <img src="./img/img-main/Cat-Timmy.png" alt="Cat-Timmy">
+                    <span class="pets-name">Timmy</span>
+                    <a href="#"><button class="learn-more-button">Learn More</button></a>
+                </div>
+                <div class="pet">
+                    <img src="./img/img-main/Dog-Charly.png" alt="Dog-Charly">
+                    <span class="pets-name">Charly</span>
+                    <a href="#"><button class="learn-more-button">Learn More</button></a>
+                </div>
+                <div class="pet">
+                    <img src="./img/img-main/Dog-Scarlett.png" alt="Scarlett-dog">
+                    <span class="pets-name">Scarlett</span>
+                    <a href="#"><button class="learn-more-button">Learn More</button></a>
+                </div>
+                <div class="pet">
+                    <img src="./img/img-main/Cat-Freddie.png" alt="Cat-Freddie">
+                    <span class="pets-name">Freddie</span>
+                    <a href="#"><button class="learn-more-button">Learn More</button></a>
+                </div>
+            </div>
+            <div class="pets-pagination">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span>...</span>
+                <a href="#">10</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="col-1">
+                <span>For questions <br>
+                    and suggestions</span>
+                <span class="e-mail">email@shelter.com</span>
+                <span class="phone">+13 674 567 75 54</span>
+            </div>
+            <div class="col-2">
+                <span>We are waiting <br>
+                    for your visit</span>
+                <span class="loc-1">Boston, Central Street, 1st <br>
+                    (Entrance from the store)</span>
+                <span class="loc-2">London, South Park, 18st</span>
+            </div>
+            <img src="./img/img-main/Dog-footer.png" alt="Dog">
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".learn-more-button")
+                .mouseover(function () {
+                    $(this).parent().parent().addClass("hovered")
+                    console.log("it works")
+                    console.log($(this).parent())
+                })
+                .mouseout(function () {
+                    $(this).parent().parent().removeClass("hovered")
+                })
+        })
+    </script>
+</body>
