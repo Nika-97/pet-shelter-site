@@ -23,6 +23,24 @@
                     <a href="#">Contacts</a>
                 </div>
             </div>
+
+            <div class="header-mobile">
+                <div class="burger-container">
+                    <div id="burger">
+                        <div class="bar topBar"></div>
+                        <div class="bar btmBar"></div>
+                    </div>
+                </div>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#">Mac</a></li>
+                    <li class="menu-item"><a href="#">iPad</a></li>
+                    <li class="menu-item"><a href="#">iPhone</a></li>
+                    <li class="menu-item"><a href="#">Watch</a></li>
+                    <li class="menu-item"><a href="#">TV</a></li>
+                    <li class="menu-item"><a href="#">Music</a></li>
+                    <li class="menu-item"><a href="#">Support</a></li>
+                </ul>
+            </div>
             <!-- <div class="container-banner">
                 <div class="container-banner-text"> -->
             <h1>Not only people <br>
@@ -209,30 +227,49 @@
                 items: 3,
                 // margin: 100,
                 dots: false,
-                // responsive: {
-                //     0: {
-                //         items: 1
-                //     },
-                //     600: {
-                //         items: 3
-                //     },
-                //     1000: {
-                //         items: 5
-                //     }
-                // }
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false,
+                        dots: true,
+                    },
+                    750: {
+                        items: 2,
+                        // nav: false,
+                    },
+                    900: {
+                        items: 2,
+                        // nav: false,
+                    },
+                    1050: {
+                        items: 3
+                    },
+
+                }
             })
             // событие наведения на карточку pet
             $(".learn-more-button")
                 .mouseover(function () {
                     // навели курсор на объект 
-                    $(this).parent().parent().addClass( "hovered" ) 
-                    console.log("it works")   
-                    console.log($(this).parent())   
+                    $(this).parent().parent().addClass("hovered")
+                    console.log("it works")
+                    console.log($(this).parent())
                 })
                 .mouseout(function () {
-                    $(this).parent().parent().removeClass( "hovered" ) 
+                    $(this).parent().parent().removeClass("hovered")
                     // отвели курсор с объекта
                 })
+
+            // мобильное меню
+
+            var burger = document.querySelector('.burger-container'),
+                header = document.querySelector('.header-mobile');
+
+            burger.onclick = function () {
+                header.classList.toggle('menu-opened');
+            }
+
         })
     </script>
 </body>
