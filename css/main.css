@@ -858,8 +858,13 @@ button {
       margin: 0px 10px; }
       .section3 .owl-dots button.active {
         background: #f1cdb3 !important; }
+  .header-wrap .header,
+  .pets-page-wrap .container {
+    width: 100%; }
   .header-wrap .header {
     padding-top: 80px; }
+  .header-wrap .logo {
+    margin-left: 15px; }
   .header-wrap .nav {
     display: none; }
   .pet-wrap .container {

@@ -1077,9 +1077,16 @@ $menuItems: 4;
 		}
 	}
 	// pets page
+	.header-wrap .header,
+	.pets-page-wrap .container {
+		width: 100%;
+	} 
 	.header-wrap {
 		.header {
 			padding-top: 80px;
+		}
+		.logo {
+			margin-left: 15px;
 		}
 		.nav {
 			display: none;
