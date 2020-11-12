@@ -20,55 +20,39 @@
                     are looking for a house</h1>
             </div>
             <div class="all-pets">
+                <% for(var i=0; i < petsArray.length; i++ ) {%>
                 <div class="pet">
-                    <img src="./img/img-main/Cat-Kathrine.png" alt="Cat-Katrine">
-                    <span class="pets-name">Katrine</span>
-                    <a href="#">
-                        <button class="learn-more-button">Learn More</button>
-                    </a>
+                    <img src="./img/img-main/<%= petsArray[i].preview_img %>" alt="<%=petsArray[i].name %>">
+                    <span class="pets-name"><%=petsArray[i].name %> </span>
+                    <a href="/pets/<%=petsArray[i].id %>-<%=petsArray[i].name %>"><button
+                            class="learn-more-button">Learn More</button></a>
                 </div>
-                <div class="pet">
-                    <img src="./img/img-main/Dog-Jennifer.png" alt="Dog-Jennifer">
-                    <span class="pets-name">Jennifer</span>
-                    <a href="#"><button class="learn-more-button">Learn More</button></a>
-                </div>
-                <div class="pet">
-                    <img src="./img/img-main/Dog-Woody.png" alt="Dog-Woody">
-                    <span class="pets-name">Woody</span>
-                    <a href="#"><button class="learn-more-button">Learn More</button></a>
-                </div>
-                <div class="pet">
-                    <img src="./img/img-main/Sophia-puppy.png" alt="Sophia-puppy">
-                    <span class="pets-name">Sophia</span>
-                    <a href="#"><button class="learn-more-button">Learn More</button></a>
-                </div>
-                <div class="pet">
-                    <img src="./img/img-main/Cat-Timmy.png" alt="Cat-Timmy">
-                    <span class="pets-name">Timmy</span>
-                    <a href="#"><button class="learn-more-button">Learn More</button></a>
-                </div>
-                <div class="pet">
-                    <img src="./img/img-main/Dog-Charly.png" alt="Dog-Charly">
-                    <span class="pets-name">Charly</span>
-                    <a href="#"><button class="learn-more-button">Learn More</button></a>
-                </div>
-                <div class="pet">
-                    <img src="./img/img-main/Dog-Scarlett.png" alt="Scarlett-dog">
-                    <span class="pets-name">Scarlett</span>
-                    <a href="#"><button class="learn-more-button">Learn More</button></a>
-                </div>
-                <div class="pet">
-                    <img src="./img/img-main/Cat-Freddie.png" alt="Cat-Freddie">
-                    <span class="pets-name">Freddie</span>
-                    <a href="#"><button class="learn-more-button">Learn More</button></a>
-                </div>
+                <%} %>
+
             </div>
             <div class="pets-pagination">
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
+                <% if(currentPage > 2) {%>
+                <a href="/pets?page=1 %>">1</a>
                 <span>...</span>
-                <a href="#">10</a>
+                <%} %>
+
+                <% for(var i=0; i < pagesNum.length; i++ ) {%>
+
+                <% if(pagesNum[i] == currentPage) {%>
+                    
+                <a class="active" href="/pets?page=<%=pagesNum[i] %>"><%=pagesNum[i] %></a>
+
+                <%} else {%>
+
+                <a href="/pets?page=<%=pagesNum[i] %>"><%=pagesNum[i] %></a>
+
+                <%} %>
+                <%} %>
+
+                <% if(currentPage != lastPage && currentPage != lastPage - 1) {%>
+                <span>...</span>
+                <a href="/pets?page=<%=lastPage %>"><%=lastPage %></a>
+                <%} %>
             </div>
         </div>
     </div>

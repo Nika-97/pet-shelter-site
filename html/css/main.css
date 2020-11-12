@@ -722,9 +722,9 @@ button {
     display: flex;
     justify-content: center; }
     .pet-wrap .container img {
-      height: 470px; }
+      min-height: 100%; }
     .pet-wrap .container .content {
-      margin: 50px 0px 0px 50px; }
+      margin: 0px 0px 0px 50px; }
       .pet-wrap .container .content h1 {
         color: #545454;
         font-size: 35px;

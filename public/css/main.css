@@ -703,14 +703,16 @@ button {
       height: 50px;
       width: 50px;
       border-radius: 27px; }
-      .pets-page-wrap .pets-pagination a:first-child, .pets-page-wrap .pets-pagination a:last-child {
+      .pets-page-wrap .pets-pagination a:first-child {
         margin-left: 0px; }
       .pets-page-wrap .pets-pagination a:hover {
+        background-color: #f1cdb3; }
+      .pets-page-wrap .pets-pagination a.active {
         background-color: #f1cdb3; }
     .pets-page-wrap .pets-pagination span {
       color: #f1cdb3;
       font-size: 40px;
-      margin: 0px 13px; }
+      margin: 0px 0px 0px 17px; }
 
 .pet-wrap {
   background-color: #f6f6f6;
@@ -722,9 +724,9 @@ button {
     display: flex;
     justify-content: center; }
     .pet-wrap .container img {
-      height: 470px; }
+      min-height: 100%; }
     .pet-wrap .container .content {
-      margin: 50px 0px 0px 50px; }
+      margin: 0px 0px 0px 50px; }
       .pet-wrap .container .content h1 {
         color: #545454;
         font-size: 35px;

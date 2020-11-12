@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The pet</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
@@ -15,41 +15,45 @@
     <!-- end header -->
     <div class="pet-wrap">
         <div class="container">
-            <img src="./img/img-main/Dog-Jennifer-high.png" alt="Dog-Jennifer">
+            <img src="../img/img-main/<%= onePet.img %>" alt="<%= onePet.name %>">
             <div class="content">
-                <h1>Jennifer</h1>
-                <h2>Pooch + Labrador</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce <br>
-                    efficitur blandit condimentum. Proin accumsan lorem vel gra <br>
-                    vida fringilla. Suspendisse potenti. Mauris ut pulvinar nunc. <br>
-                    Donec consectetur, diam in porta tempus, urna ligula ves <br>
-                    tibulum nibh.
+                
+                <h1><%= onePet.name %></h1>
+                <h2><%= onePet.breed %></h2>
+                <p><%= onePet.pet_about %>
                 </p>
                 <ul>
-                    <li><span>Age: </span>2 months</li>
-                    <li><span>Inoculations: </span>none</li>
-                    <li><span>Diseases: </span>none</li>
-                    <li><span>Parasites: </span>none</li>
+                    <li><span>Age: </span><%= onePet.age %></li>
+                    <li><span>Inoculations: </span><%= onePet.inoculations %></li>
+                    <li><span>Diseases: </span><%= onePet.diseases %></li>
+                    <li><span>Parasites: </span><%= onePet.parasites %></li>
                 </ul>
             </div>
         </div>
     </div>
     </div>
     </div>
-    <%- include("partials/footer.ejs") %>
-    <script src="./js/jquery.min.js"></script>
+    <div class="footer">
+        <div class="container">
+            <div class="col-1">
+                <span>For questions <br>
+                    and suggestions</span>
+                <span class="e-mail">email@shelter.com</span>
+                <span class="phone">+13 674 567 75 54</span>
+            </div>
+            <div class="col-2">
+                <span>We are waiting <br>
+                    for your visit</span>
+                <span class="loc-1">Boston, Central Street, 1st <br>
+                    (Entrance from the store)</span>
+                <span class="loc-2">London, South Park, 18st</span>
+            </div>
+            <img src="../img/img-main/Dog-footer.png" alt="Dog">
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $(".learn-more-button")
-                .mouseover(function () {
-                    $(this).parent().parent().addClass("hovered")
-                    console.log("it works")
-                    console.log($(this).parent())
-                })
-                .mouseout(function () {
-                    $(this).parent().parent().removeClass("hovered")
-                })
-                
             // мобильное меню
             var burger = document.querySelector('.burger-container'),
                 header = document.querySelector('.header-mobile');

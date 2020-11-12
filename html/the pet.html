@@ -80,17 +80,7 @@
     </div>
     <script src="./js/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $(".learn-more-button")
-                .mouseover(function () {
-                    $(this).parent().parent().addClass("hovered")
-                    console.log("it works")
-                    console.log($(this).parent())
-                })
-                .mouseout(function () {
-                    $(this).parent().parent().removeClass("hovered")
-                })
-                
+        $(document).ready(function () {                
             // мобильное меню
             var burger = document.querySelector('.burger-container'),
                 header = document.querySelector('.header-mobile');

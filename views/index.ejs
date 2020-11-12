@@ -13,20 +13,14 @@
     <div class="section1">
         <div class="container">
             <%- include("partials/header.ejs") %>
-            <!-- <div class="container-banner"> -->
             <h1>Not only people <br>
                 need a house</h1>
             <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida <br>
                 est in porttitor porttitor. Duis sodales elementum ipsum, vehicula <br>
                 condimentum erat fringilla et.</p>
-            <!-- <a href="#"> -->
+            <a href="/pets">
             <button>Make a friend</button>
-            <!-- </a> -->
-            <!-- </div> -->
-            <!-- <div class="container-banner-dog">
-                    <img class="banner-dog" src="./img/img-main/Background-dog.png" alt="Dog">
-                </div> -->
-            <!-- </div> -->
+            </a>
         </div>
     </div>
     <div class="section2">
@@ -56,14 +50,16 @@
             </div>
 
             <div class="all-pets owl-carousel">
+                <% for(var i=0; i < petsArray.length; i++ ) {%>
                 <div class="pet">
-                    <img src="./img/img-main/Cat-Kathrine.png" alt="Cat-Katrine">
-                    <span class="pets-name">Katrine</span>
-                    <a href="#">
+                    <img src="./img/img-main/<%= petsArray[i].preview_img %>" alt="<%=petsArray[i].name %>">
+                    <span class="pets-name"><%=petsArray[i].name %></span>
+                    <a href="/pets/<%=petsArray[i].id %>-<%=petsArray[i].name %>">
                         <button class="learn-more-button">Learn More</button>
                     </a>
                 </div>
-                <div class="pet">
+                <%} %>
+                <!-- <div class="pet">
                     <img src="./img/img-main/Dog-Jennifer.png" alt="Dog-Jennifer">
                     <span class="pets-name">Jennifer</span>
                     <a href="/pet"><button class="learn-more-button">Learn More</button></a>
@@ -97,9 +93,9 @@
                     <img src="./img/img-main/Cat-Freddie.png" alt="Cat-Freddie">
                     <span class="pets-name">Freddie</span>
                     <a href="#"><button class="learn-more-button">Learn More</button></a>
-                </div>
+                </div> -->
             </div>
-            <a href="#">
+            <a href="/pets">
                 <button class="rest-button">Get to know the rest</button>
             </a>
         </div>
