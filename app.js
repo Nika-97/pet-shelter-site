@@ -128,18 +128,5 @@ app.get('/pets/:petIDName', function (request, response) {
     })
 })
 
-app.get('/test1', function (request, response) {
-    // отправляем ответ
-
-    let sliderDataFromBD = ['pet1', 'pet2', 'pet3']
-
-    response.render('test-view', {
-        title: "test",
-        h2: "test1 page",
-        sliderVarEjs: sliderDataFromBD
-    })
-})
-
-
 // начинаем прослушивать подключения на 3000 порту
 app.listen(3000)
