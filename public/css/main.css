@@ -872,10 +872,11 @@ button {
   .pet-wrap .container {
     flex-wrap: wrap; }
     .pet-wrap .container img {
-      height: 410px; }
+      height: 440px;
+      min-height: 0%; }
     .pet-wrap .container .content {
       margin-left: 0px;
-      margin-top: 25px; } }
+      margin-top: 70px; } }
 
 @media (max-width: 576px) {
   h2 {
@@ -923,10 +924,20 @@ button {
       margin-top: 25px; }
   .pets-page-wrap .pets-pagination a {
     font-size: 18px;
-    height: 40px;
-    width: 40px;
-    border-radius: 22px; }
+    height: 36px;
+    width: 36px;
+    border-radius: 20px;
+    margin-left: 8px; }
+  .pets-page-wrap .pets-pagination:first-child {
+    margin-left: 0px; }
+  .pets-page-wrap .pets-pagination span {
+    font-size: 24px;
+    margin: 10px 0px 0px 6px; }
   .pet-wrap {
     padding-top: 85px; }
     .pet-wrap .container img {
-      height: 295px; } }
+      height: 400px; } }
+
+@media (max-width: 440px) {
+  .pet-wrap .container img {
+    height: 300px; } }

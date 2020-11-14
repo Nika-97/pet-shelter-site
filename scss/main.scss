@@ -849,7 +849,7 @@ $menuItems: 4;
 				background-color: #f1cdb3;
 			}
 			&.active {
-				background-color: #f1cdb3; 
+				background-color: #f1cdb3;
 			}
 		}
 		span {
@@ -1098,11 +1098,12 @@ $menuItems: 4;
 	.pet-wrap .container {
 		flex-wrap: wrap;
 		img {
-			height: 410px;
+			height: 440px;
+			min-height: 0%;
 		}
 		.content {
 			margin-left: 0px;
-			margin-top: 25px;
+			margin-top: 70px;
 		}
 	}
 }
@@ -1169,19 +1170,38 @@ $menuItems: 4;
 		}
 	}
 	// pets page
-	.pets-page-wrap .pets-pagination a {
-		font-size: 18px;
-		height: 40px;
-		width: 40px;
-		border-radius: 22px;
+	.pets-page-wrap .pets-pagination {
+		a {
+			font-size: 18px;
+			height: 36px;
+			width: 36px;
+			border-radius: 20px;
+			margin-left: 8px;
+		}
+		&:first-child {
+			margin-left: 0px;
+		}
+		span {
+			font-size: 24px;
+			margin: 10px 0px 0px 6px;
+		}
 	}
+
 	// the pet page
 	.pet-wrap {
 		padding-top: 85px;
 		.container {
 			img {
-				height: 295px;
+				height: 400px;
 			}
+		}
+	}
+}
+@media (max-width: 440px) {
+	// the pet page
+	.pet-wrap .container {
+		img {
+			height: 300px;
 		}
 	}
 }
